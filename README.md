@@ -5,7 +5,8 @@ Filter out sequences that match a reference genome, e.g., [PhiX](https://www.ill
 * Reference genome to filter against (in [FASTA](https://en.wikipedia.org/wiki/FASTA_format) format), e.g., [phiX174](https://www.ncbi.nlm.nih.gov/nuccore/NC_001422.1?report=fasta) ([Phi X 174 bacteriophage](https://en.wikipedia.org/wiki/Phi_X_174))
 * [NCBI BLAST+](https://blast.ncbi.nlm.nih.gov/doc/blast-help/downloadblastdata.html#downloadblastdata) (<code>makeblastdb</code> and <code>blastn</code>)
 * [FASTX-Toolkit](http://hannonlab.cshl.edu/fastx_toolkit/) (<code>fastq_to_fasta</code>)
-* [GNU split](https://www.gnu.org/software/coreutils/manual/html_node/split-invocation.html)
+* [GNU core utilities](https://www.gnu.org/software/coreutils/) (e.g., <code>split</code>)
+* [GNU sed](https://www.gnu.org/software/sed/)
 
 # Usage
 ```text
