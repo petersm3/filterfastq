@@ -208,7 +208,7 @@ foreach my $file (@files) {
     # path of the fastq_input_dir since supplying ./ as an input will no longer resolve correctly
     my $fastq_input_dir_abs_path = abs_path($fastq_input_dir);
     # Split on 8 million; each header with sequence is equal to two lines
-    system("cd $fastq_output_dir/filterfastq/ ; gunzip -c $fastq_input_dir_abs_path/$file_basename | $fastq_to_fasta -n -Q33 | sed -n '/^N*\$/{s/.*//;x;d;};x;p;\${x;p;}' | sed '/^\$/d' | split -l 8000000 - FASTASPLIT");
+    system("cd $fastq_output_dir/filterfastq/ ; gunzip -c $fastq_input_dir_abs_path/$file_basename | $fastq_to_fasta -n -Q33 | sed -n '/^N*\$/{s/.*//;x;d;};x;p;\${x;p;}' | sed '/^\$/d' | $split -l 8000000 - FASTASPLIT");
     my $fastq_to_fasta_exit_code = $? >> 8;
     if ( $fastq_to_fasta_exit_code != 0)
     {
