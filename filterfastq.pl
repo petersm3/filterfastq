@@ -199,7 +199,7 @@ foreach my $file (@files) {
     }
     # sed statement will match any sequence starting with an N and repeating Ns to the 
     # end of the line and then remove the N sequence line and the header above it
-    # Removing serveral sequences in a row contianing all Ns is necessary for blastn which can
+    # Removing several sequences in a row contianing all Ns is necessary for blastn which can
     # potentially fail with "BLAST engine error" and an exit code of '3' due to low diversity
     # Use GNU split to create FASTA files containing 4 million reads each to ensure that 
     # BLAST finishes within the available memory on the system.
