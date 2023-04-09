@@ -3,7 +3,7 @@ Filter out sequences that match a reference genome, e.g., [PhiX](https://www.ill
 
 # Dependencies
 * Reference genome to filter against (in FASTA format), e.g., [phiX174](https://www.ncbi.nlm.nih.gov/nuccore/NC_001422.1?report=fasta)
-* [NCBI BLAST+](https://blast.ncbi.nlm.nih.gov/doc/blast-help/downloadblastdata.html#downloadblastdata) (<code>makeblastdb</code>)
+* [NCBI BLAST+](https://blast.ncbi.nlm.nih.gov/doc/blast-help/downloadblastdata.html#downloadblastdata) (<code>makeblastdb</code> and <code>blastn</code>)
 * [FASTX-Toolkit](http://hannonlab.cshl.edu/fastx_toolkit/) (<code>fastq_to_fasta</code>)
 * [GNU split](https://www.gnu.org/software/coreutils/manual/html_node/split-invocation.html)
 
