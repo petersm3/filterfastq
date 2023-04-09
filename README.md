@@ -1,6 +1,11 @@
 # Summary
 Filter out sequences that match a reference genome, e.g., [PhiX](https://www.illumina.com/content/dam/illumina-support/documents/products/technotes/technote_phixcontrolv3.pdf), from Illumina [HiSeq](https://www.illumina.com/systems/sequencing-platforms/hiseq-3000-4000.html)/[MiSeq](https://www.illumina.com/systems/sequencing-platforms/miseq.html) gzipped FASTQ files (single or paired-end)
 
+# Dependencies
+* [NCBI BLAST+](https://blast.ncbi.nlm.nih.gov/doc/blast-help/downloadblastdata.html#downloadblastdata) (<code>makeblastdb</code>)
+* [FASTX-Toolkit](http://hannonlab.cshl.edu/fastx_toolkit/) (<code>fastq_to_fasta</code>)
+* [GNU split](https://www.gnu.org/software/coreutils/manual/html_node/split-invocation.html)
+
 # Usage
 ```text
 ./filterfastq.pl 
