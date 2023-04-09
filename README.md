@@ -9,7 +9,7 @@ Filter out sequences that match a reference genome, e.g., [PhiX](https://www.ill
 
 # Usage
 ```text
-./filterfastq.pl 
+./filterfastq.pl -h
 
 Usage: ./filterfastq.pl -r reference_genome.fa -i fastq_input_dir -o fastq_output_dir [-t threads] [-e evalue]
 
