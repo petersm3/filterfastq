@@ -64,7 +64,7 @@ if (! -x "$blastn") {
     exit(1);
 }
 
-if (! -x "$makeblastdb") {
+if (! -x "$fastq_to_fasta") {
     print "\nERROR: FASTX-Toolkit fastq_to_fasta at '$fastq_to_fasta' is not executeable.\n";
     print "       Modify \$fastq_to_fasta variable in $0 to specify location.\n\n";
     exit(1);
