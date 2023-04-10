@@ -1,6 +1,11 @@
 # Summary
 Filter out sequences in Illumina [HiSeq](https://www.illumina.com/systems/sequencing-platforms/hiseq-3000-4000.html)/[MiSeq](https://www.illumina.com/systems/sequencing-platforms/miseq.html) gzipped [FASTQ](https://en.wikipedia.org/wiki/FASTQ_format) files (single or paired-end) that match a reference genome, e.g., [PhiX](https://www.illumina.com/content/dam/illumina-support/documents/products/technotes/technote_phixcontrolv3.pdf) (Control Libraries)
 
+# Disclaimer
+* For removing contamination it is recommended that you use other programs, e.g., JGI's [BBDuk](https://jgi.doe.gov/data-and-tools/software-tools/bbtools/bb-tools-user-guide/bbduk-guide/) "Kmer filtering" feature as part of [Data Preprocessing](https://jgi.doe.gov/data-and-tools/software-tools/bbtools/bb-tools-user-guide/data-preprocessing/)
+* <code>filterfastq.pl</code> was originally written as a proof of concept (and used in production on a limited basis) due to Illumina's [elimination](https://www.illumina.com/content/dam/illumina-marketing/documents/products/technotes/technote-hiseq-low-diversity.pdf) of the dedicated PhiX control lane (#8) on their Hiseq 3000/4000 instruments
+  * e.g., Sequencing a non-indexed sample (whole genome) with a large PhiX spike-in (e.g., 10%) may have required filtering of the final set of FASTQ reads
+ 
 # Dependencies
 * Reference genome to filter against (in [FASTA](https://en.wikipedia.org/wiki/FASTA_format) format), e.g., [phiX174](https://www.ncbi.nlm.nih.gov/nuccore/NC_001422.1?report=fasta) ([Phi X 174 bacteriophage](https://en.wikipedia.org/wiki/Phi_X_174))
 * [NCBI BLAST+](https://blast.ncbi.nlm.nih.gov/doc/blast-help/downloadblastdata.html#downloadblastdata) (<code>makeblastdb</code> and <code>blastn</code>)
