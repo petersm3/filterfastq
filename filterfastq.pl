@@ -187,7 +187,7 @@ if ( $makeblastdb_exit_code != 0)
     exit(1);
 }
 
-# Itterate through all gzipped FASTQ files independent if there's a R2
+# Iterate through all gzipped FASTQ files independent if there's a R2
 # @files defined above during pre-flight checks
 foreach my $file (@files) {
     my $file_basename = basename $file;
@@ -221,7 +221,7 @@ foreach my $file (@files) {
     # "Warning: lcl|Query_9948 M01498:124:000000000-AB6JN:1:1101:9390:1655 1:N:0:1:
     #  Warning: Could not calculate ungapped Karlin-Altschul parameters due to an invalid query
     #  sequence or its translation. Please verify the query sequence(s) and/or filtering options"
-    # Itterate BLAST over each "FASTASPLIT" file containing a maximum of 4 million reads.
+    # Iterate BLAST over each "FASTASPLIT" file containing a maximum of 4 million reads.
     if (! defined $quiet) {
         print "BLASTing $file_basename.fasta against $reference_genome_basename using $threads threads\n";
         # Check for number of intermediary FASTA files containing a maximum of 4 million reads each
@@ -239,7 +239,7 @@ foreach my $file (@files) {
         exit(1);
     }
 
-    # Itterate over each split file BLASTing it against the reference and append the blastn.txt output file
+    # Iterate over each split file BLASTing it against the reference and append the blastn.txt output file
     my @split_files = glob("$fastq_output_dir/filterfastq/FASTASPLIT*");
     foreach my $split_file (@split_files) {
         my $split_file_basename = basename $split_file;
@@ -319,7 +319,7 @@ foreach my $file (@files) {
         print "Writing filtered output to $output_fastq\n";
     }
     open OFH, "| /bin/gzip -c > $output_fastq" or die "ERROR: Unable to open $output_fastq\n";
-    # Itterate over gzip file outputing reads that did not match the BLAST hits
+    # Iterate over gzip file outputing reads that did not match the BLAST hits
     open IFH, "/bin/gunzip -c $file | " or die "ERROR: Unable ot open $file\n";
     my $fastq_count = 0;
     my $fastq_header_count = 0;
