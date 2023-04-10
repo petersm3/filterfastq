@@ -3,7 +3,7 @@ Filter out sequences in Illumina [HiSeq](https://www.illumina.com/systems/sequen
 
 # Disclaimer
 * For removal of contamination it is recommended that you use other programs, e.g., JGI's [BBDuk](https://jgi.doe.gov/data-and-tools/software-tools/bbtools/bb-tools-user-guide/bbduk-guide/) "Kmer filtering" feature as part of [Data Preprocessing](https://jgi.doe.gov/data-and-tools/software-tools/bbtools/bb-tools-user-guide/data-preprocessing/)
-* <code>filterfastq.pl</code> was originally written as a proof of concept (and used in production on a limited basis) due to Illumina's [elimination](https://www.illumina.com/content/dam/illumina-marketing/documents/products/technotes/technote-hiseq-low-diversity.pdf) of the dedicated PhiX control lane (#8) on their Hiseq 3000/4000 instruments
+* <code>filterfastq.pl</code> was originally written as a proof of concept in 2015 (and used in production on a limited basis) due to Illumina's [elimination](https://www.illumina.com/content/dam/illumina-marketing/documents/products/technotes/technote-hiseq-low-diversity.pdf) of the dedicated PhiX control lane (#8) on their Hiseq 3000/4000 instruments
   * e.g., Sequencing a non-indexed sample (whole genome) with a large PhiX spike-in (e.g., 10%) may have required filtering of the final set of FASTQ reads
  
 # Dependencies
