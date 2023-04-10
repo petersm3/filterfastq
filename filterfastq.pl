@@ -256,7 +256,7 @@ foreach my $file (@files) {
             if($blastn_exit_code == 3) {
                 print "       Exit code 3 may indicate numerous 'low-complexity' sequences";
                 print "       e.g., sequences with too many Ns. See also:";
-                print "       http://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=FAQ#LCR";
+                print "       https://blast.ncbi.nlm.nih.gov/doc/blast-help/FAQ.html#faq-10";
             }
             if($blastn_exit_code == 137) {
                 print "       Exit code 137 indicates that $blastn ran out of memory!";
