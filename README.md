@@ -15,7 +15,7 @@ Filter out sequences in Illumina [HiSeq](https://www.illumina.com/systems/sequen
 * [GNU sed](https://www.gnu.org/software/sed/)
 
 # Usage
-```text
+```console
 ./filterfastq.pl -h
 
 Usage: ./filterfastq.pl -r reference_genome.fa -i fastq_input_dir -o fastq_output_dir [-t threads] [-e evalue]
