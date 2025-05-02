@@ -10,7 +10,7 @@ Filter out sequences in Illumina [HiSeq](https://support.illumina.com/sequencing
 # Dependencies
 * Reference genome to filter against (in [FASTA](https://en.wikipedia.org/wiki/FASTA_format) format), e.g., [phiX174](https://www.ncbi.nlm.nih.gov/nuccore/NC_001422.1?report=fasta) ([Phi X 174 bacteriophage](https://en.wikipedia.org/wiki/Phi_X_174))
 * [NCBI BLAST+](https://blast.ncbi.nlm.nih.gov/doc/blast-help/downloadblastdata.html#downloadblastdata) (<code>makeblastdb</code> and <code>blastn</code>)
-* [FASTX-Toolkit](http://hannonlab.cshl.edu/fastx_toolkit/) (<code>fastq_to_fasta</code>)
+* [FASTX-Toolkit](https://web.archive.org/web/20240418113115/http://hannonlab.cshl.edu/fastx_toolkit/) (<code>fastq_to_fasta</code>)
 * [GNU core utilities](https://www.gnu.org/software/coreutils/) (e.g., <code>split</code>)
 * [GNU sed](https://www.gnu.org/software/sed/)
 
