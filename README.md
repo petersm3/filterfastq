@@ -1,21 +1,22 @@
 # Summary
 Filter out sequences in Illumina [HiSeq](https://support.illumina.com/sequencing/sequencing_instruments/hiseq-3000.html)/[MiSeq](https://www.illumina.com/systems/sequencing-platforms/miseq.html) gzipped [FASTQ](https://en.wikipedia.org/wiki/FASTQ_format) files (single or paired-end) that match a [reference genome](https://en.wikipedia.org/wiki/Reference_genome), e.g., [PhiX](https://www.illumina.com/content/dam/illumina-support/documents/products/technotes/technote_phixcontrolv3.pdf) (Control Libraries)
 
-# Disclaimer
+## Disclaimer
 * For removal of contamination it is recommended that you use other programs
   * e.g., JGI's [BBDuk](https://archive.jgi.doe.gov/data-and-tools/software-tools/bbtools/bb-tools-user-guide/) "Kmer filtering" feature as part of [Data Preprocessing](https://archive.jgi.doe.gov/data-and-tools/software-tools/bbtools/bb-tools-user-guide/data-preprocessing/)
 * <code>filterfastq.pl</code> was originally written as a proof of concept in 2015 (and used in production on a limited basis) due to Illumina's [elimination](https://www.illumina.com/content/dam/illumina-marketing/documents/products/technotes/technote-hiseq-low-diversity.pdf) of the dedicated [PhiX](https://www.illumina.com/content/dam/illumina-support/documents/products/technotes/technote_phixcontrolv3.pdf) control lane (#8) on their [HiSeq 3000](https://support.illumina.com/sequencing/sequencing_instruments/hiseq-3000.html)/4000 instruments
   * e.g., Sequencing a non-indexed sample (whole genome) with a large PhiX spike-in (e.g., 10%) may have required filtering of the final set of FASTQ reads
 * <code>filterfastq.pl</code> uses NCBI's command-line [BLAST](https://blast.ncbi.nlm.nih.gov/doc/blast-help/index.html) (<code>blastn</code>) to compare sequences in a semi-serial fashion, i.e., sets of 4 million sequences, using multiple <code>blastn</code> threads, against the reference genome (as a BLAST database), which can take a long time
   * e.g., Approximately 11.75 days to process 264,724,686 single end reads, which had a recorded PhiX spike-in at 0.6%; 0.521% reads were filtered out by the script
-# Dependencies
+
+## Dependencies
 * Reference genome to filter against (in [FASTA](https://en.wikipedia.org/wiki/FASTA_format) format), e.g., [phiX174](https://www.ncbi.nlm.nih.gov/nuccore/NC_001422.1?report=fasta) ([Phi X 174 bacteriophage](https://en.wikipedia.org/wiki/Phi_X_174))
 * [NCBI BLAST+](https://blast.ncbi.nlm.nih.gov/doc/blast-help/downloadblastdata.html#downloadblastdata) (<code>makeblastdb</code> and <code>blastn</code>)
 * [FASTX-Toolkit](https://web.archive.org/web/20240418113115/http://hannonlab.cshl.edu/fastx_toolkit/) (<code>fastq_to_fasta</code>)
 * [GNU core utilities](https://www.gnu.org/software/coreutils/) (e.g., <code>split</code>)
 * [GNU sed](https://www.gnu.org/software/sed/)
 
-# Usage
+## Usage
 ```console
 $ ./filterfastq.pl -h
 
