@@ -1,4 +1,6 @@
-# Summary
+# FilterFASTQ
+
+## Summary
 Filter out sequences in Illumina [HiSeq](https://support.illumina.com/sequencing/sequencing_instruments/hiseq-3000.html)/[MiSeq](https://www.illumina.com/systems/sequencing-platforms/miseq.html) gzipped [FASTQ](https://en.wikipedia.org/wiki/FASTQ_format) files (single or paired-end) that match a [reference genome](https://en.wikipedia.org/wiki/Reference_genome), e.g., [PhiX](https://www.illumina.com/content/dam/illumina-support/documents/products/technotes/technote_phixcontrolv3.pdf) (Control Libraries)
 
 ## Disclaimer
